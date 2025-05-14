@@ -490,6 +490,14 @@ body {
   margin-bottom: 24px;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .about-author .image-box {
+    background-image: url(../img/about-author/image-1x.png);
+  }
+}
+
 .about-author .quote {
   color: #fff;
   text-align: center;
@@ -590,6 +598,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg-wrapper {
+    background-image: url(../img/wrapper-bg-2x.jpg);
+  }
 }
 
 /* years-later */
