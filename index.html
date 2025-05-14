@@ -8,13 +8,934 @@
       rel="stylesheet"
       href="node_modules/modern-normalize/modern-normalize.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header class="header"><div class="container"></div></header>
+    <header class="header">
+      <div class="container">
+        <div class="short-box">
+          <p class="short-info">Експрес-курс</p>
+          <p class="short-info">
+            старт <span id="dateElement"></span> <span id="monthElement"></span>
+          </p>
+        </div>
+      </div>
+    </header>
     <main>
-      <section></section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="title">Обираю себе</h1>
+          <p class="text">
+            Як перестати тягнути все на собі і почати жити для себе – без
+            почуття провини і вигоряння, усього за 15 хвилин в день
+          </p>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-text">5 днів — 5 поворотних моментів до себе</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Менше “я маю” –більше “я хочу”</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">
+                Не треба “все міняти” – тільки припинити зраджувати себе
+              </p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Нарешті станеш головною для себе</p>
+            </li>
+            <li class="list-item">
+              <p class="item-text">Твій дозвіл бути особливою</p>
+            </li>
+          </ul>
+          <a class="btn-link-container" href="">
+            <p class="btn-link">ДЕТАЛЬНІШЕ</p>
+            <div class="btn-star-container">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/hero/star-1x.png 1x,
+                    ./src/img/hero/star-2x.png 2x
+                  "
+                  width="80"
+                  height="80" />
+                <img
+                  class="btn-star-image"
+                  src="./src/img/hero/star-1x.png"
+                  alt="star-sale"
+                  width="80"
+                  height="80"
+              /></picture>
+              <p class="btn-sale-text">
+                знижка <br />
+                <span>-90%</span>
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="desc-box">
+          <p class="desc">без провини</p>
+        </div>
+      </section>
+      <section class="bonuses">
+        <div class="container">
+          <h2 class="title">
+            Встигніть приєднатись до кінця відліку і <span>забрати бонуси</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Аудіо-медитація “Я — не функція”</p>
+              <p class="item-text">
+                щоб повернути контакт із собою перед сном або зранку
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-02-1x.png 1x,
+                    ./src/img/bonuses/bonus-02-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-02-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Міні-гайд “Як сказати «ні» без провини”</p>
+              <p class="item-text">
+                короткі фрази, які можна використовувати в щоденних ситуаціях
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-03-1x.png 1x,
+                    ./src/img/bonuses/bonus-03-2x.png 2x
+                  "
+                  width="220"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-03-1x.png"
+                  alt="bonus"
+                  width="220"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Картки-афірмації “Я собі дозволяю”</p>
+              <p class="item-text">
+                можна зберегти, роздрукувати або поставити як заставку
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-one" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="for-what">
+        <div class="container">
+          <h2 class="title">Курс для тебе, якщо:</h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-01-1x.png 1x,
+                    ./src/img/for-what/image-01-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-01-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">Востаннє була в салоні краси 3 роки тому</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-02-1x.png 1x,
+                    ./src/img/for-what/image-02-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-02-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">Засинаєш з думкою «я знову всіх підвела»</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-03-1x.png 1x,
+                    ./src/img/for-what/image-03-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-03-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">Купуєш нове тільки дітям, а не собі</p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-04-1x.png 1x,
+                    ./src/img/for-what/image-04-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-04-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                Забуваєш їсти і не помічаєш, як пройшов день
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-05-1x.png 1x,
+                    ./src/img/for-what/image-05-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-05-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                Допомагаєш усім, але ніхто не питає, як ти
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/for-what/image-06-1x.png 1x,
+                    ./src/img/for-what/image-06-2x.png 2x
+                  "
+                  width="40"
+                  height="auto" />
+                <img
+                  class="item-image"
+                  src="./src/img/for-what/image-06-1x.png"
+                  alt="image"
+                  width="40"
+                  height="auto"
+              /></picture>
+              <p class="item-text">
+                Прагнеш тиші, сну і внутрішнього «можна вже не тягнути»
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about-author">
+        <div class="container">
+          <h2 class="title">Автор курсу</h2>
+          <div class="image-box"><p class="quote">Я більше не рятую</p></div>
+          <h3 class="name">Мене звати Тетяна Романюк</h3>
+          <p class="desc">
+            Я знаю, як це — бути зручною для всіх і втратити себе
+          </p>
+          <ul class="list">
+            <li class="list-item">
+              Тата не було. Я росла — як опора для мами, як надія для родичів,
+              як підтримка для чоловіка
+            </li>
+            <li class="list-item">
+              Я тягнула все. Допомагала кожному. Намагалась вгодити всім. А
+              винною залишалась усе одно — завжди
+            </li>
+            <li class="list-item">
+              Мені вказували, як жити. Коли народжувати. Кому служити. А я
+              мовчала. Терпіла. Працювала. І рятувала — навіть тих, хто мене
+              принижував за те, що не могла завагітніти
+            </li>
+            <li class="list-item">
+              Перелом настав, коли я залишилась одна. Борги. Проблеми. Тиша.
+              Ніхто не підтримав. Ніхто не простягнув руки. Мама — жаліла.
+              Родичі — злились. Чоловік — зраджував. Свекруха — сміялась
+            </li>
+          </ul>
+          <img
+            class="arrow"
+            src="./src/img/about-author/arrow.svg"
+            alt="arrow"
+          />
+          <p class="first-text">І тоді я вперше зробила неможливе:</p>
+          <p class="main-text">Я вибрала себе</p>
+        </div>
+      </section>
+      <div class="bg-wrapper">
+        <section class="years-later">
+          <div class="container">
+            <h2 class="title">Минуло шість років</h2>
+            <p class="text">
+              І тепер у мене є те, що я колись не дозволяла собі навіть мріяти:
+            </p>
+            <ul class="list">
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/years-later/item-01-1x.png 1x,
+                      ./src/img/years-later/item-01-2x.png 2x
+                    "
+                    width="40"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/years-later/item-01-1x.png"
+                    alt="image"
+                    width="40"
+                    height="auto"
+                /></picture>
+                <p class="item-text">Спокій</p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/years-later/item-02-1x.png 1x,
+                      ./src/img/years-later/item-02-2x.png 2x
+                    "
+                    width="40"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/years-later/item-02-1x.png"
+                    alt="image"
+                    width="40"
+                    height="auto"
+                /></picture>
+                <p class="item-text">Сім’я</p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/years-later/item-03-1x.png 1x,
+                      ./src/img/years-later/item-03-2x.png 2x
+                    "
+                    width="40"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/years-later/item-03-1x.png"
+                    alt="image"
+                    width="40"
+                    height="auto"
+                /></picture>
+                <p class="item-text">Двоє дітей</p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/years-later/item-04-1x.png 1x,
+                      ./src/img/years-later/item-04-2x.png 2x
+                    "
+                    width="40"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/years-later/item-04-1x.png"
+                    alt="image"
+                    width="40"
+                    height="auto"
+                /></picture>
+                <p class="item-text">Чоловік, якого я люблю</p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/years-later/item-05-1x.png 1x,
+                      ./src/img/years-later/item-05-2x.png 2x
+                    "
+                    width="40"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/years-later/item-05-1x.png"
+                    alt="image"
+                    width="40"
+                    height="auto"
+                /></picture>
+                <p class="item-text">Справжня справа — з серця</p>
+              </li>
+            </ul>
+            <p class="desc">
+              Цей курс — не про теорію. Це мій шлях Від «я мушу всім» — до «я
+              більше не рятую»
+            </p>
+            <p class="now-text">Тепер — тільки для себе І разом із собою</p>
+            <a class="btn-link-container" href="">
+              <p class="btn-link">ДЕТАЛЬНІШЕ</p>
+              <div class="btn-star-container">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/hero/star-1x.png 1x,
+                      ./src/img/hero/star-2x.png 2x
+                    "
+                    width="80"
+                    height="80" />
+                  <img
+                    class="btn-star-image"
+                    src="./src/img/hero/star-1x.png"
+                    alt="star-sale"
+                    width="80"
+                    height="80"
+                /></picture>
+                <p class="btn-sale-text">
+                  знижка <br />
+                  <span>-90%</span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section class="how-going">
+          <div class="container">
+            <h2 class="title">Як проходить міні-курс</h2>
+            <ul class="list">
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/how-going/image-01-1x.png 1x,
+                      ./src/img/how-going/image-01-2x.png 2x
+                    "
+                    width="36"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/how-going/image-01-1x.png"
+                    alt="image"
+                    width="36"
+                    height="auto"
+                /></picture>
+                <p class="item-text">
+                  <span>5 днів,</span> щодня: відео (5–10 хв), аудіо / практика,
+                  завдання
+                </p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/how-going/image-02-1x.png 1x,
+                      ./src/img/how-going/image-02-2x.png 2x
+                    "
+                    width="36"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/how-going/image-02-1x.png"
+                    alt="image"
+                    width="36"
+                    height="auto"
+                /></picture>
+                <p class="item-text">
+                  Потрібно лише <span>15 хвилин</span> на день
+                </p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/how-going/image-03-1x.png 1x,
+                      ./src/img/how-going/image-03-2x.png 2x
+                    "
+                    width="36"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/how-going/image-03-1x.png"
+                    alt="image"
+                    width="36"
+                    height="auto"
+                /></picture>
+                <p class="item-text"><span>Доступ</span> — 60 днів</p>
+              </li>
+              <li class="list-item">
+                <picture
+                  ><source
+                    srcset="
+                      ./src/img/how-going/image-04-1x.png 1x,
+                      ./src/img/how-going/image-04-2x.png 2x
+                    "
+                    width="36"
+                    height="auto" />
+                  <img
+                    class="item-image"
+                    src="./src/img/how-going/image-04-1x.png"
+                    alt="image"
+                    width="36"
+                    height="auto"
+                /></picture>
+                <p class="item-text">
+                  <span>Формат:</span> Telegram або особистий кабінет
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <section class="program">
+        <div class="container">
+          <h2 class="title">Уроки курсу</h2>
+          <ul class="list">
+            <li class="list-item">
+              <p class="item-number">День 1</p>
+              <p class="item-title">Хто ти без ролі рятівниці?</p>
+              <div class="item-text-box">
+                <p class="item-text">
+                  Впізнаєш себе справжню, не через “кому я потрібна”
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">День 2</p>
+              <p class="item-title">Чому ця роль більше не працює?</p>
+              <div class="item-text-box">
+                <p class="item-text">Побачиш, як тебе навчили себе забувати</p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">День 3</p>
+              <p class="item-title">Межі як мова любові</p>
+              <div class="item-text-box">
+                <p class="item-text">
+                  Навчишся ставити «ні» без тряски і провини
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">День 4</p>
+              <p class="item-title">Опора всередині</p>
+              <div class="item-text-box">
+                <p class="item-text">
+                  Знайдеш спокій і впевненість, що все — ок
+                </p>
+              </div>
+            </li>
+            <li class="list-item">
+              <p class="item-number">День 5</p>
+              <p class="item-title">Я не тягну. Я творю</p>
+              <div class="item-text-box">
+                <p class="item-text">
+                  Відчуєш енергію створювати своє життя, а не виживати
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="price"><span>2770грн</span> 277грн</p>
+          <a class="start-btn" href="">Почати</a>
+          <p class="garant-title">Гарантія поверення коштів - 14 днів</p>
+          <p class="garant-text">
+            Якщо вам не сподобається курс, ми повернемо вам всю суму без зайвих
+            питань
+          </p>
+        </div>
+      </section>
+      <section class="bonuses">
+        <div class="container">
+          <h2 class="title">
+            Встигніть приєднатись до кінця відліку і <span>забрати бонуси</span>
+          </h2>
+          <ul class="list">
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-01-1x.png 1x,
+                    ./src/img/bonuses/bonus-01-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-01-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Аудіо-медитація “Я — не функція”</p>
+              <p class="item-text">
+                щоб повернути контакт із собою перед сном або зранку
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-02-1x.png 1x,
+                    ./src/img/bonuses/bonus-02-2x.png 2x
+                  "
+                  width="155"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-02-1x.png"
+                  alt="bonus"
+                  width="155"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Міні-гайд “Як сказати «ні» без провини”</p>
+              <p class="item-text">
+                короткі фрази, які можна використовувати в щоденних ситуаціях
+              </p>
+            </li>
+            <li class="list-item">
+              <picture
+                ><source
+                  srcset="
+                    ./src/img/bonuses/bonus-03-1x.png 1x,
+                    ./src/img/bonuses/bonus-03-2x.png 2x
+                  "
+                  width="220"
+                  height="auto" />
+                <img
+                  class="bonus-image"
+                  src="./src/img/bonuses/bonus-03-1x.png"
+                  alt="bonus"
+                  width="220"
+                  height="auto"
+              /></picture>
+              <p class="item-title">Картки-афірмації “Я собі дозволяю”</p>
+              <p class="item-text">
+                можна зберегти, роздрукувати або поставити як заставку
+              </p>
+            </li>
+          </ul>
+          <div id="countdown-two" class="countdown">
+            <div class="countdown-number">
+              <span class="minutes countdown-time"></span>
+              <div class="countdown-label minutes-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="seconds countdown-time"></span>
+              <div class="countdown-label seconds-label"></div>
+            </div>
+            <div><span class="countdown-doubledot">:</span></div>
+            <div class="countdown-number">
+              <span class="milliseconds countdown-time"></span>
+              <div class="countdown-label milliseconds-label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="container">
+          <h2 class="title">Який результат</h2>
+          <p class="subtitle">ти отримаеш, коли пройдеш курс:</p>
+          <div class="list-wrapper">
+            <img
+              class="arrow arrow-1 left"
+              src="./src/img/result/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow arrow-2 right"
+              src="./src/img/result/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow arrow-3 left"
+              src="./src/img/result/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow arrow-4 right"
+              src="./src/img/result/arrow.svg"
+              alt="arrow"
+            />
+            <img
+              class="arrow arrow-5 left"
+              src="./src/img/result/arrow.svg"
+              alt="arrow"
+            />
+            <ul class="list">
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">
+                  Вперше скажеш “я не винна” — і повіриш у це
+                </p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">
+                  Спокійно вип’єш каву, не думаючи про списки задач
+                </p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">З’їси сніданок, не стоячи, не на ходу</p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">
+                  Почнеш говорити “ні” — без тривоги і самозради
+                </p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">
+                  Виділиш вечір на себе — і не відчуєш провини
+                </p>
+              </li>
+              <li class="list-item">
+                <img
+                  class="item-check"
+                  src="./src/img/result/check-2x.png"
+                  alt="check"
+                  width="32"
+                />
+                <p class="item-text">
+                  З'явиться енергія не “виживати”, а жити по-новому
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="bg-wrapper">
+        <section class="questions">
+          <div class="container">
+            <h2 class="title">Питання, які</h2>
+            <p class="subtitle">можуть у вас виникнути</p>
+            <div class="questions-container">
+              <ul class="questions-list list">
+                <li class="questions-item">
+                  <div class="questions-title-container">
+                    <p class="questions-item-title">
+                      А якщо в мене немає часу?
+                    </p>
+                    <div class="questions-item-svg"></div>
+                  </div>
+                  <div class="questions-answer-container">
+                    <div class="questions-wrapper">
+                      <p class="questions-answer">
+                        Досить 15 хвилин на день. Серйозно. Це простір, де ти не
+                        винна в тому, що втомилась
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="questions-item">
+                  <div class="questions-title-container">
+                    <p class="questions-item-title">
+                      Я вже проходила курси. Це знову не спрацює?
+                    </p>
+                    <div class="questions-item-svg"></div>
+                  </div>
+                  <div class="questions-answer-container">
+                    <div class="questions-wrapper">
+                      <p class="questions-answer">
+                        Це не курс «зміни себе». Це запрошення бути собою.
+                        По-справжньому
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="questions-item">
+                  <div class="questions-title-container">
+                    <p class="questions-item-title">
+                      А якщо я зірвусь і не дійду до кінця?
+                    </p>
+                    <div class="questions-item-svg"></div>
+                  </div>
+                  <div class="questions-answer-container">
+                    <div class="questions-wrapper">
+                      <p class="questions-answer">
+                        Нічого страшного. Тут немає провалу. Кожен день — вже
+                        крок. Навіть один — цінний
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="questions-item">
+                  <div class="questions-title-container">
+                    <p class="questions-item-title">
+                      Це щось про “любити себе”?
+                    </p>
+                    <div class="questions-item-svg"></div>
+                  </div>
+                  <div class="questions-answer-container">
+                    <div class="questions-wrapper">
+                      <p class="questions-answer">Так, зможеш</p>
+                      <p class="questions-answer">
+                        Так, але не через мантри. Через малі дії, які повертають
+                        до себе — живої, втомленої, справжньої
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="questions-item">
+                  <div class="questions-title-container">
+                    <p class="questions-item-title">
+                      Чи буде підтримка, якщо буде важко?
+                    </p>
+                    <div class="questions-item-svg"></div>
+                  </div>
+                  <div class="questions-answer-container">
+                    <div class="questions-wrapper">
+                      <p class="questions-answer">
+                        Так. Є чат, де можна просто бути, писати, мовчати. Тебе
+                        там ніхто не тягне — але ти не одна
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="price"><span>2770 грн</span> 277 грн</p>
+              <a class="start-btn" href="">ХОЧУ З ВАМИ</a>
+            </div>
+          </div>
+        </section>
+        <div class="footer">
+          <div class="container">
+            <div class="fop-box">
+              <p class="name">фоп прізвище імʼя</p>
+              <p class="code">іпн 00000000</p>
+            </div>
+            <a
+              class="mail-container"
+              href="mailto:"
+              rel="nofollow"
+              target="_blank"
+              ><img
+                src="./src/img/footer-mail.svg"
+                width="15"
+                height="15"
+                alt="mail"
+              />пошта</a
+            >
+            <div class="deals-box">
+              <a
+                href=""
+                target="_blank"
+                rel="nofollow"
+                class="deals-link public"
+                >публічна оферта
+              </a>
+              <a
+                href=""
+                target="_blank"
+                rel="nofollow"
+                class="deals-link confidence"
+                >політика конфідеційності</a
+              >
+            </div>
+            <a
+              href="https://www.instagram.com/lisabardadym"
+              class="disigner-box"
+              target="_blank"
+              rel="nofollow"
+            >
+              <img src="./src/img/insta.svg" alt="insta" width="25" />
+              <p class="dising">
+                розробка сайту <br />
+                <span>lisa bardadym</span>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="footer"><div class="container"></div></footer>
+    <script type="module" src="./src/js/changeDate.js"></script>
+    <script type="module" src="./src/js/timer.js"></script>
+    <script type="module" src="./src/js/questions.js"></script>
   </body>
 </html>
